@@ -1,0 +1,48 @@
+*{
+    padding: 0;
+    margin: 0;
+
+}
+.home-heading{
+    position: absolute;
+    top: 50%;
+    left: 40%;
+}
+
+.Home-Nav {
+    display: flex;
+    background-color: #333; /* Darker navigation background color */
+    width: 100vw;
+    padding: 20px 0;
+    justify-content: space-around; /* Distribute space between navigation links */
+    align-items: center; /* Center items vertically */
+  }
+  
+  .Nav-Link {
+    text-decoration: none;
+    color: #fff; /* Navigation link color */
+    font-size: 16px;
+    position: relative;
+  }
+  
+  .Nav-Link:hover {
+    color: #00bcd4; /* Change color on hover */
+  }
+  
+  .Nav-Link::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    background-color: #00bcd4; /* Animation bar color */
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+  }
+  
+  .Nav-Link:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  
