@@ -13,7 +13,7 @@ export default function App() {
             <BrowserRouter>
 
                 <Routes>
-                    <Route element={<Layout />}>
+                    <Route path="/" element={<Layout />}>
 
                         <Route path='/tittles' element={<Body />}></Route>
                         <Route path='/detail/:id' element={<Detailpage />}></Route>
