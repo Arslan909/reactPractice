@@ -18,10 +18,10 @@ export default function Detailpage() {
     let body = Data.map(elem => {
         if (elem.id == titleId.id) {
             return (
-                <div key={elem.id}>
+                <div key={elem.id} className="body-container">
                     <h2>this is the body of the title you checked with id {elem.id}:</h2>
-                    <h3>{elem.title}</h3>
-                    <p >{elem.body}</p>
+                    <h3>Title: {elem.title}</h3>
+                    <p >Detail: {elem.body}</p>
                 </div>
                 
             )

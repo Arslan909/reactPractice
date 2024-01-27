@@ -1,4 +1,5 @@
-import logo from "./logo.jpeg"
+import logo from "/logo.jpeg"
+import { Link } from "react-router-dom"
 
 export default function Navbar() {
     return (
@@ -8,7 +9,7 @@ export default function Navbar() {
                 <a href="#">work <span className="icon-span"><i className="nf nf-md-purse nav1-icon"></i> </span> </a>
                 <a href="#">service <span className="icon-span"><i className="nf nf-fa-coffee nav1-icon"></i></span> </a>
                 <a href="#">about <span className="icon-span"><i className="nf nf-fa-heart nav1-icon"></i></span> </a>
-
+                <Link to="/tittles">articles</Link>
 
             </nav>
             <nav className="nav-bar2">
