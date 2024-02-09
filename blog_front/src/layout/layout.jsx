@@ -4,13 +4,16 @@ import "../App.css"
 import { Outlet } from "react-router-dom";
 
 
+
 export default function Layout() {
     return (
         <>
             <Navbar />
-            <Outlet />
+            <div className="body-container">
+                <Outlet />
+            </div>
             <Footer />
-            
+
         </>
     )
 }

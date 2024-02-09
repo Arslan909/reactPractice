@@ -23,7 +23,7 @@ body {
 .nav-bar1 {
     /* border: 2px solid blue; */
     display: flex;
-    width: 23%;
+    width: 30%;
     align-items: center;
     justify-content: space-between;
     font-weight: bold;
@@ -235,4 +235,14 @@ body {
     margin-top: 20px;
     padding: 5px;
     
+}
+
+
+.warning-container{
+    border:  1px solid black;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%);
+    background-color: white;
 }

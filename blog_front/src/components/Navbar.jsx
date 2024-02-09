@@ -12,6 +12,7 @@ export default function Navbar() {
                 <a href="#">service <span className="icon-span"><i className="nf nf-fa-coffee nav1-icon"></i></span> </a>
                 <a href="#">about <span className="icon-span"><i className="nf nf-fa-heart nav1-icon"></i></span> </a>
                 <Link to="/tittles">articles</Link>
+                <Link to="/tittles/addpost">add article</Link>
 
             </nav>
             <nav className="nav-bar2">
