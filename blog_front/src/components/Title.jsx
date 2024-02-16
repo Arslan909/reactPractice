@@ -9,10 +9,14 @@ import Warning from "./Warning";
 export default function Body() {
     const [warningState, setWarningState] = useState(null)
 
+
+    const [start,setStart] = React.useState(0)
+    const  limit = 10
+
     const [titleData, setData] = React.useState(null);
     async function fetchData() {
         let reqObj = {
-            url: "https://jsonplaceholder.typicode.com/posts",
+            url: `https://jsonplaceholder.typicode.com/posts?_start=${start}&_limit=${limit}`,
             method: "GET"
         }
         const result = await axios(reqObj)
@@ -22,7 +26,7 @@ export default function Body() {
     React.useEffect(() => {
         fetchData()
 
-    }, [])
+    }, [start])
 
     let titles
     if (titleData !== null) {
@@ -81,11 +85,10 @@ export default function Body() {
             <div className="body-bottom">
 
                 {titles}
-
+                <button onClick={()=>{setStart(pre => pre-10)}}>previous</button>
+                <span>{start} to {start+ limit}</span>
+                <button onClick={()=>{setStart(pre => pre+10)}}>next</button>
             </div>
         </>
-        // <div className="body-container">
-            
-        // </div>
     )
 }
